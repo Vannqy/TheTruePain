@@ -1,0 +1,59 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://ui/popups/NoteViewerScripts.gd" id="1_note"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5nubn"]
+bg_color = Color(0.5984333, 0.6061633, 0.55920625, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5nubn"]
+font_size = 25
+font_color = Color(0.83571965, 0, 0, 1)
+outline_size = 7
+outline_color = Color(0.017732391, 0.017732391, 0.01773239, 1)
+
+[node name="NoteViewer" type="CanvasLayer"]
+layer = 10
+script = ExtResource("1_note")
+
+[node name="Dim" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01292, 0.01292, 0.01292, 0.47)
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -343.0
+offset_top = -228.0
+offset_right = 343.0
+offset_bottom = 228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5nubn")
+
+[node name="NoteLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 36.0
+offset_right = 633.0
+offset_bottom = 390.0
+label_settings = SubResource("LabelSettings_5nubn")
+autowrap_mode = 3
+uppercase = true
+
+[node name="HintLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 402.0
+offset_right = 633.0
+offset_bottom = 440.0
+text = "(Nhấn E để đóng)"
+label_settings = SubResource("LabelSettings_5nubn")
+horizontal_alignment = 1
+uppercase = true

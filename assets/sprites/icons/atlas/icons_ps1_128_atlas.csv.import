@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://b8vl5chr2tbla"
+
+[deps]
+
+files=["res://assets/sprites/icons/atlas/icons_ps1_128_atlas.x.translation", "res://assets/sprites/icons/atlas/icons_ps1_128_atlas.y.translation", "res://assets/sprites/icons/atlas/icons_ps1_128_atlas.width.translation", "res://assets/sprites/icons/atlas/icons_ps1_128_atlas.height.translation"]
+
+source_file="res://assets/sprites/icons/atlas/icons_ps1_128_atlas.csv"
+dest_files=["res://assets/sprites/icons/atlas/icons_ps1_128_atlas.x.translation", "res://assets/sprites/icons/atlas/icons_ps1_128_atlas.y.translation", "res://assets/sprites/icons/atlas/icons_ps1_128_atlas.width.translation", "res://assets/sprites/icons/atlas/icons_ps1_128_atlas.height.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

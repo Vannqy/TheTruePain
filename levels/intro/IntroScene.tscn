@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cbgaaaf4vhybj"]
+
+[ext_resource type="Script" uid="uid://hpknkhbg7254" path="res://levels/intro/IntroScripts.gd" id="1_hc7eg"]
+[ext_resource type="AudioStream" uid="uid://5daqlnmq02q3" path="res://assets/audio/music/freesound_community-strange-lullaby-28691.mp3" id="2_aqbct"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3pwq5"]
+font_size = 40
+font_color = Color(1, 1, 1, 0.71000004)
+outline_color = Color(1, 0.27999997, 0.27999997, 0.7529412)
+
+[node name="IntroScene" type="Control" unique_id=1059939075]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hc7eg")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1367991222]
+layout_mode = 0
+offset_right = 1288.0
+offset_bottom = 728.0
+color = Color(0, 0, 0, 1)
+
+[node name="StoryLabel" type="Label" parent="." unique_id=443793847]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 72.0
+offset_right = 1160.0
+offset_bottom = 656.0
+theme_override_font_sizes/font_size = 30
+label_settings = SubResource("LabelSettings_3pwq5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="IntroMusic" type="AudioStreamPlayer" parent="." unique_id=343540853]
+stream = ExtResource("2_aqbct")
+volume_db = 10.0
+
+[node name="FadeRect" type="ColorRect" parent="." unique_id=430299160]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

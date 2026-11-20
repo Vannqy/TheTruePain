@@ -1,0 +1,285 @@
+[gd_scene format=3 uid="uid://dj47fsp5alp11"]
+
+[ext_resource type="Script" uid="uid://d04s162mqoj6l" path="res://levels/house/HouseScripts.gd" id="1_jjxvr"]
+[ext_resource type="Texture2D" uid="uid://7e0xc7823s2f" path="res://assets/sprites/environment/tiles/Brick/Brick_16-256x256.png" id="2_myv26"]
+[ext_resource type="Texture2D" uid="uid://b4sh63v6vclq5" path="res://assets/sprites/environment/tiles/Tile/Tile_10-256x256.png" id="3_nequ0"]
+[ext_resource type="Texture2D" uid="uid://dwtenpw35hp0g" path="res://assets/sprites/environment/doors/Door 8.png" id="4_uh6ed"]
+[ext_resource type="AudioStream" uid="uid://cn4cy4rwhe0qy" path="res://assets/audio/sfx/house_office/Cutting board_chop_4.wav" id="5_wwk8k"]
+[ext_resource type="Texture2D" uid="uid://604cq5qwqvw3" path="res://assets/sprites/environment/interior_sheets/sprites_2x/bed.png" id="6_p0pow"]
+[ext_resource type="Texture2D" uid="uid://bwcfrynvemj33" path="res://assets/sprites/environment/interior_sheets/sprites_2x/fireplace.png" id="7_03ee5"]
+[ext_resource type="Texture2D" uid="uid://3urwscmka0jt" path="res://assets/sprites/environment/interior_sheets/sprites_2x/round_table.png" id="8_eltuj"]
+[ext_resource type="Texture2D" uid="uid://b5i42jb2y8fty" path="res://assets/sprites/icons/256/folded_note.png" id="9_x54cc"]
+[ext_resource type="Texture2D" uid="uid://8pm85n608eoo" path="res://assets/sprites/environment/interior_sheets/sprites_2x/barrel.png" id="10_l3oxt"]
+[ext_resource type="Texture2D" uid="uid://cueuklh51kmp8" path="res://assets/sprites/environment/interior_pack_2/sprites/2x/candle_holder.png" id="11_hpsww"]
+[ext_resource type="Texture2D" uid="uid://djioacjvmn07v" path="res://assets/sprites/environment/interior_sheets/sprites_2x/bookshelf.png" id="12_o0iuf"]
+[ext_resource type="Texture2D" uid="uid://bux0wk8daao6k" path="res://assets/sprites/environment/interior_pack_2/sprites/2x/crate.png" id="13_j56hj"]
+[ext_resource type="Texture2D" uid="uid://dd2ck3yhhvgv3" path="res://assets/sprites/environment/interior_pack_2/sprites/2x/keg_stand.png" id="14_adyam"]
+[ext_resource type="Texture2D" uid="uid://c2jlxtndg018q" path="res://assets/sprites/environment/interior_pack_2/sprites/2x/chair.png" id="15_ch5b3"]
+[ext_resource type="PackedScene" uid="uid://dgll4gftwsuu6" path="res://ui/hud/HudScene.tscn" id="16_247n2"]
+[ext_resource type="AudioStream" uid="uid://d12el0p4trimo" path="res://assets/audio/sfx/house_office/switch.wav" id="19_b14pn"]
+[ext_resource type="PackedScene" uid="uid://blmrs7w7du1ec" path="res://entities/player/PlayerScene.tscn" id="20_jjxvr"]
+[ext_resource type="AudioStream" uid="uid://5daqlnmq02q3" path="res://assets/audio/music/freesound_community-strange-lullaby-28691.mp3" id="20_sw6y4"]
+[ext_resource type="AudioStream" uid="uid://bo270curipenn" path="res://assets/audio/sfx/ambient/Rain_Heavy.wav" id="21_6c0p0"]
+[ext_resource type="Script" path="res://systems/interaction/InteractableScripts.gd" id="100_inter"]
+[ext_resource type="PackedScene" path="res://ui/popups/NoteViewerScene.tscn" id="101_note"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdii"]
+size = Vector2(52.000015, 47.109383)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_23vyd"]
+size = Vector2(108.67926, 116.904816)
+
+[sub_resource type="Gradient" id="Gradient_7ngmn"]
+colors = PackedColorArray(1, 0.8001019, 0.26711738, 0.88600004, 0.07846785, 0.07846785, 0.13335153, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_nvdii"]
+gradient = SubResource("Gradient_7ngmn")
+fill = 1
+fill_from = Vector2(0.45294118, 0.5176471)
+fill_to = Vector2(0.87058824, 0.15882353)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npw23"]
+size = Vector2(127.422066, 93.935455)
+
+[sub_resource type="Gradient" id="Gradient_p6riq"]
+colors = PackedColorArray(1, 0.8, 0.26666668, 1, 0.07846785, 0.07846785, 0.13335153, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_81p4s"]
+gradient = SubResource("Gradient_p6riq")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.6764706, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_81p4s"]
+size = Vector2(119.714294, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cok4c"]
+size = Vector2(2650, 361)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3eqf"]
+size = Vector2(2721, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_84452"]
+size = Vector2(94, 793)
+
+[node name="HouseScene" type="Node2D" unique_id=803558223]
+script = ExtResource("1_jjxvr")
+CameraLimits = Rect2i(0, 0, 2624, 770)
+PlayerMode = 1
+metadata/_edit_vertical_guides_ = [-120.0]
+
+[node name="Background" type="TextureRect" parent="." unique_id=411695122]
+offset_right = 2728.0
+offset_bottom = 920.0
+texture = ExtResource("2_myv26")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Floor" type="TextureRect" parent="." unique_id=1686943441]
+offset_left = -16.0
+offset_top = 544.0
+offset_right = 2720.0
+offset_bottom = 920.0
+texture = ExtResource("3_nequ0")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Door" type="Sprite2D" parent="." unique_id=7159230]
+position = Vector2(2145, 343.00003)
+scale = Vector2(4.7692313, 4.571429)
+texture = ExtResource("4_uh6ed")
+
+[node name="DoorArea" type="Area2D" parent="Door" unique_id=1655060177]
+script = ExtResource("100_inter")
+Prompt = "Nhấn E để mở cửa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/DoorArea" unique_id=598895660]
+position = Vector2(-0.62908936, -21.726566)
+scale = Vector2(0.99999976, 0.9999996)
+shape = SubResource("RectangleShape2D_nvdii")
+
+[node name="Handle" type="AudioStreamPlayer2D" parent="Door" unique_id=33031704]
+stream = ExtResource("5_wwk8k")
+volume_db = 20.0
+
+[node name="Bed" type="Sprite2D" parent="." unique_id=254330908]
+position = Vector2(119.00002, 551.5)
+scale = Vector2(2.1718743, 4.304688)
+texture = ExtResource("6_p0pow")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bed" unique_id=1081130416]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/StaticBody2D" unique_id=25615842]
+position = Vector2(-0.4829979, -9.0655365)
+scale = Vector2(1, 1.0000006)
+shape = SubResource("RectangleShape2D_23vyd")
+
+[node name="Fireplace" type="Sprite2D" parent="." unique_id=1005921905]
+position = Vector2(420, 286.49997)
+scale = Vector2(3.6875, 4.773438)
+texture = ExtResource("7_03ee5")
+
+[node name="FireplaceLight" type="PointLight2D" parent="Fireplace" unique_id=401550976]
+position = Vector2(-3.254259, 32.602283)
+scale = Vector2(2.576271, 1.0253683)
+energy = 2.0
+texture = SubResource("GradientTexture2D_nvdii")
+texture_scale = 3.0
+
+[node name="Table" type="Sprite2D" parent="." unique_id=252144909]
+position = Vector2(1017.00006, 495)
+scale = Vector2(1.703125, 1.9375002)
+texture = ExtResource("8_eltuj")
+
+[node name="TableArea" type="Area2D" parent="Table" unique_id=928247081]
+script = ExtResource("100_inter")
+Prompt = "Có thứ gì đó ở đây, nhấn E để xem"
+position = Vector2(-187.8899, 52.645172)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table/TableArea" unique_id=454825017]
+position = Vector2(190.23853, -153.80644)
+scale = Vector2(0.99999976, 1)
+shape = SubResource("RectangleShape2D_npw23")
+
+[node name="Paper" type="Sprite2D" parent="." unique_id=2019641037]
+position = Vector2(1040.0001, 456)
+scale = Vector2(0.4375, 0.125)
+texture = ExtResource("9_x54cc")
+
+[node name="Barrel" type="Sprite2D" parent="." unique_id=1821529051]
+position = Vector2(1752, 478)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("10_l3oxt")
+
+[node name="BarrelSecond" type="Sprite2D" parent="Barrel" unique_id=1747594812]
+position = Vector2(-88.888855, -7.5555573)
+scale = Vector2(1.1111115, 1.1944443)
+texture = ExtResource("10_l3oxt")
+
+[node name="Candle" type="Sprite2D" parent="." unique_id=2074362658]
+position = Vector2(977, 377)
+texture = ExtResource("11_hpsww")
+
+[node name="CandleLight" type="PointLight2D" parent="Candle" unique_id=1623054678]
+position = Vector2(-1.499939, -10.000015)
+scale = Vector2(5.8906255, 6.3749995)
+color = Color(1, 0.8, 0.26666668, 1)
+texture = SubResource("GradientTexture2D_81p4s")
+texture_scale = 2.0
+
+[node name="Candle2" type="Sprite2D" parent="." unique_id=1250662965]
+position = Vector2(1588, 284)
+texture = ExtResource("11_hpsww")
+
+[node name="CandleLight" type="PointLight2D" parent="Candle2" unique_id=2079947578]
+position = Vector2(-1.499939, -10.000015)
+scale = Vector2(5.8906255, 6.3749995)
+color = Color(1, 0.8, 0.26666668, 1)
+texture = SubResource("GradientTexture2D_81p4s")
+texture_scale = 2.0
+
+[node name="Candle3" type="Sprite2D" parent="." unique_id=500628887]
+position = Vector2(2435.5, 100)
+scale = Vector2(1.609375, 0.75)
+texture = ExtResource("11_hpsww")
+
+[node name="CandleLight" type="PointLight2D" parent="Candle3" unique_id=1600556873]
+position = Vector2(-1.499939, -10.000015)
+scale = Vector2(5.8906255, 6.3749995)
+color = Color(1, 0.8, 0.26666668, 1)
+texture = SubResource("GradientTexture2D_81p4s")
+texture_scale = 2.0
+
+[node name="Candle4" type="Sprite2D" parent="." unique_id=756499609]
+position = Vector2(1900, 362.50003)
+scale = Vector2(1.3749985, 1.0312504)
+texture = ExtResource("11_hpsww")
+
+[node name="CandleLight" type="PointLight2D" parent="Candle4" unique_id=1663295367]
+position = Vector2(-2.9088135, -15.030304)
+scale = Vector2(5.8906255, 6.3749995)
+color = Color(1, 0.8, 0.26666668, 1)
+texture = SubResource("GradientTexture2D_81p4s")
+texture_scale = 2.0
+
+[node name="Shelf1" type="Sprite2D" parent="." unique_id=20589029]
+position = Vector2(767.00006, 352.99997)
+scale = Vector2(3.0234375, 3.796875)
+texture = ExtResource("12_o0iuf")
+
+[node name="Shelf2" type="Sprite2D" parent="." unique_id=1142982182]
+position = Vector2(2487, 347.00003)
+scale = Vector2(3.129044, 3.7550046)
+texture = ExtResource("12_o0iuf")
+
+[node name="Box" type="Sprite2D" parent="." unique_id=1965470809]
+position = Vector2(1752.0001, 303)
+scale = Vector2(1.75, 2)
+texture = ExtResource("13_j56hj")
+
+[node name="BoxArea" type="Area2D" parent="Box" unique_id=1072602908]
+script = ExtResource("100_inter")
+Prompt = "Nhấn E để lục thùng"
+position = Vector2(0, -12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box/BoxArea" unique_id=204331204]
+position = Vector2(0, 18)
+shape = SubResource("RectangleShape2D_81p4s")
+
+[node name="BoxEmpty" type="Sprite2D" parent="." unique_id=1625998560]
+position = Vector2(1908, 484)
+scale = Vector2(1.75, 1.9166666)
+texture = ExtResource("13_j56hj")
+
+[node name="Keg" type="Sprite2D" parent="." unique_id=1949328833]
+position = Vector2(1336, 420)
+scale = Vector2(2.3333335, 2.3124998)
+texture = ExtResource("14_adyam")
+
+[node name="Chair" type="Sprite2D" parent="." unique_id=1534574990]
+position = Vector2(1160, 448)
+scale = Vector2(1.5, 2)
+texture = ExtResource("15_ch5b3")
+
+[node name="Hud" parent="." unique_id=1364343962 instance=ExtResource("16_247n2")]
+
+[node name="NoteViewer" parent="." instance=ExtResource("101_note")]
+
+[node name="WallTop" type="StaticBody2D" parent="." unique_id=2134481347]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop" unique_id=1263113512]
+position = Vector2(1315, 170.5)
+shape = SubResource("RectangleShape2D_cok4c")
+
+[node name="WallBottom" type="StaticBody2D" parent="." unique_id=785506097]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom" unique_id=782097732]
+position = Vector2(1359.5, 841)
+shape = SubResource("RectangleShape2D_d3eqf")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1820619271]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1295530115]
+position = Vector2(2674, 386.5)
+shape = SubResource("RectangleShape2D_84452")
+
+[node name="HorrorBg" type="CanvasModulate" parent="." unique_id=396830942]
+position = Vector2(1352, 576)
+color = Color(0.08235294, 0.08235294, 0.13333334, 1)
+
+[node name="Switch" type="AudioStreamPlayer2D" parent="." unique_id=202323811]
+position = Vector2(1752.0001, 303)
+scale = Vector2(1.75, 2)
+stream = ExtResource("19_b14pn")
+volume_db = 20.0
+
+[node name="BgSound" type="AudioStreamPlayer" parent="." unique_id=999736980]
+stream = ExtResource("20_sw6y4")
+volume_db = 10.0
+
+[node name="Rain" type="AudioStreamPlayer" parent="." unique_id=1642658359]
+stream = ExtResource("21_6c0p0")
+volume_db = 15.0
+
+[node name="Player" parent="." unique_id=1322090470 instance=ExtResource("20_jjxvr")]
+position = Vector2(296, 452)

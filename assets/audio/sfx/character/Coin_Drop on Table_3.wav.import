@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqcdtd1kj77ee"
+path="res://.godot/imported/Coin_Drop on Table_3.wav-650ceec9aa3b34ac1874fe2deffa27bd.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/character/Coin_Drop on Table_3.wav"
+dest_files=["res://.godot/imported/Coin_Drop on Table_3.wav-650ceec9aa3b34ac1874fe2deffa27bd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

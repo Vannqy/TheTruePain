@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3]
+
+[ext_resource type="Script" path="res://systems/inventory/ItemDataScripts.gd" id="1_data"]
+[ext_resource type="Texture2D" uid="uid://u0g1yfofj51f" path="res://assets/sprites/icons/256/flashlight.png" id="2_icon"]
+
+[resource]
+script = ExtResource("1_data")
+Id = "flashlight"
+DisplayName = "Đèn pin"
+Description = "Soi sáng bóng tối. Nhấn F để bật/tắt."
+Icon = ExtResource("2_icon")
+MaxStack = 1

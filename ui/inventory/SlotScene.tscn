@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://cebp4af17ymjh"]
+
+[ext_resource type="Script" uid="uid://cvpj7xp0fa1i8" path="res://ui/inventory/SlotScripts.gd" id="1_slot"]
+[ext_resource type="Texture2D" uid="uid://cb8ckmxk5hqp4" path="res://assets/sprites/ui/inventory_travelbook/01_TravelBookLite/Sprites/UI_TravelBook_Slot01a.png" id="2_bg"]
+
+[node name="SlotScene" type="Control" unique_id=759448060]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 96.0
+offset_bottom = 96.0
+script = ExtResource("1_slot")
+
+[node name="Background" type="TextureRect" parent="." unique_id=226062293]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1606700931]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 14.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="AmountLabel" type="Label" parent="." unique_id=950031009]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -30.0
+offset_right = -6.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "1"
+horizontal_alignment = 2

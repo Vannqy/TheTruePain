@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://raclr172q2bf"
+path="res://.godot/imported/Gas Stove_turning off.wav-821c27d59aec966a3b741a17954c26a9.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/house_office/Gas Stove_turning off.wav"
+dest_files=["res://.godot/imported/Gas Stove_turning off.wav-821c27d59aec966a3b741a17954c26a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

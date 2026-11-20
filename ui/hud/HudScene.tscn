@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dgll4gftwsuu6"]
+
+[ext_resource type="Script" uid="uid://cyvdqa6myjqk4" path="res://ui/hud/HudScripts.gd" id="1_hud"]
+[ext_resource type="PackedScene" uid="uid://dmmtah404hdsk" path="res://ui/inventory/BackpackScene.tscn" id="2_bp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_log"]
+font_size = 35
+font_color = Color(1, 1, 1, 0.627451)
+
+[node name="Hud" type="CanvasLayer" unique_id=452452806]
+script = ExtResource("1_hud")
+
+[node name="ActionLog" type="Label" parent="." unique_id=1918976616]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 64.0
+offset_top = -144.0
+offset_right = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+label_settings = SubResource("LabelSettings_log")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Hotbar" type="HBoxContainer" parent="." unique_id=172091472]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 24.0
+offset_bottom = 24.0
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="Backpack" parent="." unique_id=392776078 instance=ExtResource("2_bp")]
+
+[node name="LogTimer" type="Timer" parent="." unique_id=1857703722]
+one_shot = true

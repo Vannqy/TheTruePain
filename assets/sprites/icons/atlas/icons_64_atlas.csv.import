@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://43sbq0gp0ur5"
+
+[deps]
+
+files=["res://assets/sprites/icons/atlas/icons_64_atlas.x.translation", "res://assets/sprites/icons/atlas/icons_64_atlas.y.translation", "res://assets/sprites/icons/atlas/icons_64_atlas.width.translation", "res://assets/sprites/icons/atlas/icons_64_atlas.height.translation"]
+
+source_file="res://assets/sprites/icons/atlas/icons_64_atlas.csv"
+dest_files=["res://assets/sprites/icons/atlas/icons_64_atlas.x.translation", "res://assets/sprites/icons/atlas/icons_64_atlas.y.translation", "res://assets/sprites/icons/atlas/icons_64_atlas.width.translation", "res://assets/sprites/icons/atlas/icons_64_atlas.height.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

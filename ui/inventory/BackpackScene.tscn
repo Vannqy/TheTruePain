@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://dmmtah404hdsk"]
+
+[ext_resource type="Script" uid="uid://d1vy23stkslj5" path="res://ui/inventory/BackpackScripts.gd" id="1_bp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.11, 0.1, 0.09, 0.96)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.45, 0.4, 0.33, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_06lan"]
+font_size = 25
+font_color = Color(1, 1, 1, 0.6666667)
+
+[node name="BackpackScene" type="Control" unique_id=1126097391]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bp")
+
+[node name="Dim" type="ColorRect" parent="." unique_id=1323876967]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Panel" type="Panel" parent="." unique_id=868869526]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -240.0
+offset_right = 350.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Title" type="Label" parent="Panel" unique_id=218284659]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 400.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 30
+text = "TAB Để đóng"
+label_settings = SubResource("LabelSettings_06lan")
+
+[node name="Grid" type="GridContainer" parent="Panel" unique_id=1035550593]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 80.0
+offset_right = 432.0
+offset_bottom = 384.0
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+columns = 4
+
+[node name="ItemName" type="Label" parent="Panel" unique_id=901623938]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 80.0
+offset_right = 676.0
+offset_bottom = 124.0
+theme_override_font_sizes/font_size = 28
+
+[node name="ItemDescription" type="Label" parent="Panel" unique_id=785224352]
+layout_mode = 0
+offset_left = 464.0
+offset_top = 132.0
+offset_right = 676.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 20
+autowrap_mode = 3

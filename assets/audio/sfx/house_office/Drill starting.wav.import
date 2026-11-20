@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://blbcnvhyxtwsk"
+path="res://.godot/imported/Drill starting.wav-d61b5f51860e42a1dd1d97dd1c87ba8d.sample"
+
+[deps]
+
+source_file="res://assets/audio/sfx/house_office/Drill starting.wav"
+dest_files=["res://.godot/imported/Drill starting.wav-d61b5f51860e42a1dd1d97dd1c87ba8d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

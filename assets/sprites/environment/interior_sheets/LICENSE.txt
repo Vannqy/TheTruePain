@@ -1,0 +1,21 @@
+StationSupply - Interior Furniture Asset License
+Version 1.0 | 2026-10-01
+
+You may use and modify these assets in personal and commercial games and
+other finished creative projects, including client work. You may distribute
+the assets as embedded parts of those projects. No royalties or attribution
+are required. Credit to StationSupply is appreciated.
+
+You may not resell, relicense, share or redistribute this pack or its assets
+as standalone files, templates, stock assets or asset collections, as-is or
+modified. Do not make the asset files publicly available for extraction or
+reuse separately from a finished project. Private collaborators may access
+them only to work on your licensed project and under these same restrictions.
+
+The free sample uses these same terms. Downloading the free sample grants
+rights only to its included files, not the rest of the full pack.
+
+AI-assisted disclosure: graphics generated with AI then converted to true
+pixel art; source proportions normalized and conversion results reviewed.
+Assets are provided as-is without warranty. To the extent permitted by law,
+StationSupply is not liable for damages resulting from their use.
