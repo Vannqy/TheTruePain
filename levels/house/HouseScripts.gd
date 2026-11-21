@@ -26,22 +26,25 @@ func _setup_level() -> void:
 
 # ===== Tương tác =====
 func _on_door_interacted() -> void:
-	if InventoryManager.has_item("flashlight"):
+	if InventoryManager.has_item("flashlight") and InventoryManager.has_item("key"):
+		InventoryManager.remove_item("key")
 		Switch.play()
 		Player.Camera.position_smoothing_enabled = false
 		Transition.change_scene(ScenePaths.OutSide)
 	else:
 		Handle.play()
-		EventBus.show_log("Mình cần ánh sáng...")
+		EventBus.show_log("Cửa bị khóa...")
 
 
 func _on_box_interacted() -> void:
 	Switch.play()
-	if InventoryManager.has_item("flashlight"):
+	if InventoryManager.has_item("flashlight") and InventoryManager.has_item("key"):
 		EventBus.show_log("Thùng rỗng")
 	else:
 		InventoryManager.add_item("flashlight")
-		EventBus.show_log("Tìm thấy đèn pin, nhấn F để sử dụng")
+		InventoryManager.add_item("key")
+		InventoryManager.add_item("vanqy")
+		EventBus.show_log("Đã tìm thấy đèn pin và chìa khóa!")
 
 
 func _on_table_interacted() -> void:

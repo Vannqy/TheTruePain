@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://blmrs7w7du1ec" path="res://entities/player/PlayerScene.tscn" id="20_jjxvr"]
 [ext_resource type="AudioStream" uid="uid://5daqlnmq02q3" path="res://assets/audio/music/freesound_community-strange-lullaby-28691.mp3" id="20_sw6y4"]
 [ext_resource type="AudioStream" uid="uid://bo270curipenn" path="res://assets/audio/sfx/ambient/Rain_Heavy.wav" id="21_6c0p0"]
-[ext_resource type="Script" path="res://systems/interaction/InteractableScripts.gd" id="100_inter"]
+[ext_resource type="Script" uid="uid://dmet30b6aq348" path="res://systems/interaction/InteractableScripts.gd" id="100_inter"]
 [ext_resource type="PackedScene" path="res://ui/popups/NoteViewerScene.tscn" id="101_note"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nvdii"]
@@ -64,7 +64,6 @@ size = Vector2(94, 793)
 
 [node name="HouseScene" type="Node2D" unique_id=803558223]
 script = ExtResource("1_jjxvr")
-CameraLimits = Rect2i(0, 0, 2624, 770)
 PlayerMode = 1
 metadata/_edit_vertical_guides_ = [-120.0]
 
@@ -132,9 +131,9 @@ scale = Vector2(1.703125, 1.9375002)
 texture = ExtResource("8_eltuj")
 
 [node name="TableArea" type="Area2D" parent="Table" unique_id=928247081]
+position = Vector2(-187.8899, 52.645172)
 script = ExtResource("100_inter")
 Prompt = "Có thứ gì đó ở đây, nhấn E để xem"
-position = Vector2(-187.8899, 52.645172)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table/TableArea" unique_id=454825017]
 position = Vector2(190.23853, -153.80644)
@@ -218,9 +217,9 @@ scale = Vector2(1.75, 2)
 texture = ExtResource("13_j56hj")
 
 [node name="BoxArea" type="Area2D" parent="Box" unique_id=1072602908]
+position = Vector2(0, -12)
 script = ExtResource("100_inter")
 Prompt = "Nhấn E để lục thùng"
-position = Vector2(0, -12)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box/BoxArea" unique_id=204331204]
 position = Vector2(0, 18)
@@ -243,7 +242,7 @@ texture = ExtResource("15_ch5b3")
 
 [node name="Hud" parent="." unique_id=1364343962 instance=ExtResource("16_247n2")]
 
-[node name="NoteViewer" parent="." instance=ExtResource("101_note")]
+[node name="NoteViewer" parent="." unique_id=1693830672 instance=ExtResource("101_note")]
 
 [node name="WallTop" type="StaticBody2D" parent="." unique_id=2134481347]
 
