@@ -43,7 +43,6 @@ func _on_box_interacted() -> void:
 	else:
 		InventoryManager.add_item("flashlight")
 		InventoryManager.add_item("key")
-		InventoryManager.add_item("vanqy")
 		EventBus.show_log("Đã tìm thấy đèn pin và chìa khóa!")
 
 

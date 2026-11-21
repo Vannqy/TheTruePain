@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Detective"
-run/main_scene="res://levels/outside/OutSideScene.tscn"
+config/name="TheTruePain"
+run/main_scene="uid://cbgaaaf4vhybj"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
