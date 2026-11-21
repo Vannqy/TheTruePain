@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="ItemData" format=3]
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dj8mgpaihyx55"]
 
-[ext_resource type="Script" path="res://systems/inventory/ItemDataScripts.gd" id="1_data"]
+[ext_resource type="Script" uid="uid://bxqxpgqhk3a2f" path="res://systems/inventory/ItemDataScripts.gd" id="1_data"]
 [ext_resource type="Texture2D" uid="uid://ca4is852pv3sr" path="res://assets/sprites/icons/256/room_key.png" id="2_icon"]
 
 [resource]
@@ -9,4 +9,3 @@ Id = "key"
 DisplayName = "Chìa khóa"
 Description = "Một chiếc chìa khóa cũ. Không rõ mở được gì."
 Icon = ExtResource("2_icon")
-MaxStack = 1

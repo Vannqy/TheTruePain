@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dxw4m41nlnwty" path="res://entities/player/PlayerScripts.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://b8dbq5nbp62ni" path="res://assets/sprites/characters/pixel_16x32/16x32 Idle-Sheet.png" id="2_0s8hk"]
 [ext_resource type="Texture2D" uid="uid://8fwdfqrm13v7" path="res://assets/sprites/characters/pixel_16x32/16x32 Walk-Sheet.png" id="3_s6w3o"]
-[ext_resource type="Texture2D" uid="uid://b5ejaic1efxcp" path="res://assets/sprites/characters/vanqy/vanqy_final_cropped.png" id="4_dqkch"]
+[ext_resource type="Texture2D" uid="uid://cpv052042cxba" path="res://assets/sprites/characters/vanqy/thaodynewnew.png" id="4_0s8hk"]
 [ext_resource type="AudioStream" uid="uid://ceflm3w3wpmlk" path="res://assets/audio/sfx/character/Footsteps_walking.wav" id="5_qlg0r"]
 [ext_resource type="AudioStream" uid="uid://dntw5e7vqo1ds" path="res://assets/audio/sfx/character/Flashlight on.wav" id="6_tuyoq"]
 
@@ -377,9 +377,10 @@ speed_scale = 1.4
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1451319554]
 visible = false
-position = Vector2(59, 111)
-scale = Vector2(0.15124154, 0.19710669)
-texture = ExtResource("4_dqkch")
+position = Vector2(81.99999, 147.50003)
+rotation = 0.17627825
+scale = Vector2(0.40729165, 0.762037)
+texture = ExtResource("4_0s8hk")
 
 [node name="Footstep" type="AudioStreamPlayer2D" parent="." unique_id=857038378]
 stream = ExtResource("5_qlg0r")
